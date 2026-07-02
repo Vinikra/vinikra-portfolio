@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="px-6 md:px-20 py-16 border-t border-white/10">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-10 md:items-end justify-between">
         <div>
-          <p className="font-display text-3xl font-black tracking-tighter text-foreground mb-2">VINIKRA®</p>
+          <p className="font-display text-3xl font-black tracking-tighter text-foreground mb-2">VINIKRA</p>
           <p className="text-on-surface-variant text-sm max-w-xs">
             Sites de alta conversão para negócios locais.
           </p>

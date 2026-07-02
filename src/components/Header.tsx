@@ -6,7 +6,7 @@ export default function Header() {
       <div className="max-w-7xl w-full flex items-center justify-between">
         <div className="flex items-center gap-2">
           <Terminal size={24} className="text-primary-container" />
-          <span className="font-display text-xl font-black tracking-tighter text-foreground">VINIKRA®</span>
+          <span className="font-display text-xl font-black tracking-tighter text-foreground">VINIKRA</span>
         </div>
 
         <nav className="flex gap-5 md:gap-8">

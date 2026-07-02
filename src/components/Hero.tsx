@@ -47,7 +47,7 @@ export default function Hero() {
         className="absolute -bottom-10 left-0 w-full select-none pointer-events-none"
       >
         <span className="block font-display text-[24vw] leading-none whitespace-nowrap font-black text-foreground">
-          VINIKRA® PERFORMANCE
+          VINIKRA PERFORMANCE
         </span>
       </motion.div>
 
