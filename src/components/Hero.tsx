@@ -48,7 +48,7 @@ export default function Hero() {
         className="absolute -bottom-10 left-0 w-full select-none pointer-events-none"
       >
         <h2 className="font-display text-[24vw] leading-none whitespace-nowrap font-black text-foreground">
-          FORGE® PERFORMANCE
+          VINIKRA® PERFORMANCE
         </h2>
       </motion.div>
 
