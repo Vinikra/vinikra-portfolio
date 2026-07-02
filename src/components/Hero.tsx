@@ -15,25 +15,17 @@ export default function Hero() {
           <span className="text-slate uppercase tracking-widest text-xs font-semibold mb-6 block">
             Vinícius Krasnievicz — Desenvolvedor Web Premium
           </span>
-          <h1 className="font-serif text-[4rem] sm:text-[clamp(4rem,8vw,7.5rem)] leading-[0.95] tracking-tight">
-            Criando{" "}
-            <span className="inline-block align-middle w-[24vw] h-[12vw] sm:w-[clamp(5rem,12vw,10rem)] sm:h-[clamp(2.5rem,6vw,5rem)] mx-1 sm:mx-2 rounded-full overflow-hidden relative grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-700">
-              <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=400&h=200" alt="Código" className="object-cover w-full h-full" />
-            </span>
-            <br />
-            experiências digitais que{" "}
-            <span className="inline-block align-middle w-[20vw] h-[12vw] sm:w-[clamp(4rem,10vw,8rem)] sm:h-[clamp(2.5rem,6vw,5rem)] mx-1 sm:mx-2 rounded-full overflow-hidden relative grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-700">
-              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=400&h=200" alt="Escala" className="object-cover w-full h-full" />
-            </span>
-            <br />
-            geram <span className="italic text-slate">escala.</span>
+          <h1 className="font-serif text-[clamp(4rem,9vw,9rem)] leading-[0.9] tracking-tighter mb-8">
+            Criando <br />
+            experiências <span className="italic text-slate">digitais</span> <br />
+            que geram escala.
           </h1>
           
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 1 }}
-            className="mt-12 sm:mt-16 flex flex-col sm:flex-row sm:items-center gap-6"
+            className="mt-8 sm:mt-12 flex flex-col sm:flex-row sm:items-center gap-6"
           >
             <a href="#contact" className="inline-flex items-center justify-center h-14 sm:h-12 px-8 rounded-full bg-accent text-ink font-semibold sm:font-medium hover:-translate-y-1 transition-transform duration-300">
               Iniciar um projeto
