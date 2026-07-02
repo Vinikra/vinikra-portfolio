@@ -1,11 +1,14 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { projects, stats } from "@/lib/data";
 
 export default function Work() {
+  const [openTooltip, setOpenTooltip] = useState<string | null>(null);
+
   return (
-    <section id="work" className="py-32 px-6 md:px-20 scroll-mt-20">
+    <section id="work" className="py-32 px-6 md:px-20 scroll-mt-20" onClick={() => setOpenTooltip(null)}>
       <div className="max-w-7xl mx-auto">
         
         {/* Stats Section FORGE style */}
@@ -26,13 +29,25 @@ export default function Work() {
               <h3 className="font-display text-xl font-bold mb-2 text-foreground flex items-center gap-2 relative group">
                 {stat.title}
                 {stat.title === "Google Lighthouse" && (
-                  <div className="flex items-center cursor-help">
+                  <div 
+                    className="flex items-center cursor-help relative"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setOpenTooltip(openTooltip === stat.title ? null : stat.title);
+                    }}
+                    onMouseEnter={() => setOpenTooltip(stat.title)}
+                    onMouseLeave={() => setOpenTooltip(null)}
+                  >
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-on-surface-variant hover:text-primary-container transition-colors">
                       <circle cx="12" cy="12" r="10"></circle>
                       <line x1="12" y1="16" x2="12" y2="12"></line>
                       <line x1="12" y1="8" x2="12.01" y2="8"></line>
                     </svg>
-                    <div className="absolute left-0 bottom-full mb-2 w-64 bg-surface-container border border-white/10 text-on-surface-variant text-sm font-sans font-normal p-4 rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-20 shadow-2xl">
+                    <div 
+                      className={`absolute left-0 bottom-full mb-2 w-64 bg-surface-container border border-white/10 text-on-surface-variant text-sm font-sans font-normal p-4 rounded-xl transition-all z-20 shadow-2xl ${
+                        openTooltip === stat.title ? "opacity-100 visible" : "opacity-0 invisible"
+                      }`}
+                    >
                       <strong className="text-foreground mb-1 block">O que é isso?</strong>
                       Lighthouse é a ferramenta oficial do Google que mede a saúde técnica de um site. Uma nota verde (90+) significa que seu site é ultrarrápido, otimizado para celulares e tem preferência nas buscas do Google.
                     </div>
