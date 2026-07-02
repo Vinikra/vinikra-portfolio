@@ -14,7 +14,7 @@ export default function Hero() {
           className="md:col-span-8"
         >
           <span className="text-primary-container uppercase tracking-widest text-xs font-semibold mb-6 block">
-            Vinícius Krasnievicz — Performance Digital Engineering
+            Vinícius Krasnievicz — Engenharia de performance digital
           </span>
           <h1 className="font-display text-[clamp(2.75rem,8vw,7.5rem)] font-black leading-[1.05] sm:leading-[0.95] tracking-tight text-foreground">
             Transformo sites em <br className="hidden md:block" />
@@ -31,8 +31,8 @@ export default function Hero() {
           <p className="text-on-surface-variant text-base sm:text-lg mb-8 max-w-sm">
             Otimização Lighthouse 90+, SEO local agressivo e arquitetura de alta performance focada em resultados reais.
           </p>
-          <a href="#contact" className="inline-flex items-center justify-center h-14 sm:h-16 px-8 sm:px-10 rounded-full bg-primary-container text-on-primary-fixed font-black hover:-translate-y-1 transition-transform duration-300 gap-4 group">
-            Solicitar Orçamento
+          <a href="#contact" className="inline-flex items-center justify-center h-14 sm:h-16 px-8 sm:px-10 rounded-full bg-primary-container text-on-primary-fixed font-black hover:-translate-y-1 transition-transform duration-300 gap-4 group focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-container">
+            Solicitar orçamento
             <ArrowRight size={24} className="group-hover:translate-x-1 transition-transform" />
           </a>
         </motion.div>

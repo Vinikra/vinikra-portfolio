@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Montserrat } from "next/font/google";
+import MotionProvider from "@/components/MotionProvider";
 import "./globals.css";
 
 const inter = Inter({
@@ -14,8 +15,17 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Vinícius Krasnievicz | Premium Web Development",
-  description: "Desenvolvedor Web — Crio sites de alta conversão e estética premium para negócios locais.",
+  metadataBase: new URL("https://vinikra.com"),
+  title: "Vinícius Krasnievicz | Sites de alta conversão para negócios locais",
+  description: "Transformo sites em máquinas de conversão: performance Google Lighthouse 98+, SEO local e design exclusivo, sem templates. Solicite um orçamento.",
+  openGraph: {
+    title: "Vinikra — Sites de alta conversão",
+    description: "Performance Google Lighthouse 98+, SEO local e design exclusivo para negócios locais.",
+    url: "https://vinikra.com",
+    siteName: "Vinikra",
+    locale: "pt_BR",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -29,7 +39,7 @@ export default function RootLayout({
       className={`${inter.variable} ${montserrat.variable} h-full antialiased bg-surface text-foreground`}
     >
       <body className="min-h-full flex flex-col font-sans selection:bg-primary-container selection:text-on-primary-fixed">
-        {children}
+        <MotionProvider>{children}</MotionProvider>
       </body>
     </html>
   );

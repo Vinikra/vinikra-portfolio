@@ -5,17 +5,17 @@ import { projects, stats } from "@/lib/data";
 
 export default function Work() {
   return (
-    <section id="work" className="py-32 px-6 md:px-20">
+    <section id="work" className="py-32 px-6 md:px-20 scroll-mt-20">
       <div className="max-w-7xl mx-auto">
         
         {/* Stats Section FORGE style */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
           <div>
-            <p className="text-on-surface-variant text-sm font-semibold mb-2 uppercase tracking-widest">01 — By the numbers</p>
-            <h2 className="font-display text-4xl md:text-5xl font-bold max-w-2xl text-foreground">O que entregamos em cada projeto.</h2>
+            <p className="text-on-surface-variant text-sm font-semibold mb-2 uppercase tracking-widest">01 — Em números</p>
+            <h2 className="font-display text-4xl md:text-5xl font-bold max-w-2xl text-foreground">O que entrego em cada projeto.</h2>
           </div>
           <div className="text-on-surface-variant text-sm uppercase tracking-widest font-semibold border border-white/10 px-4 py-2 rounded-full">
-            Snapshot — Q3 2026
+            Compromisso em todo projeto
           </div>
         </div>
 
@@ -30,7 +30,7 @@ export default function Work() {
         </div>
 
         <span className="text-primary-container uppercase tracking-widest text-xs font-semibold mb-12 block">
-          02 — Portfólio Selecionado
+          02 — Portfólio selecionado
         </span>
         
         <div className="flex flex-col gap-12">

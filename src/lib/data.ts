@@ -1,3 +1,10 @@
+// Contatos e redes: preencha para exibir os links no site (vazio = oculto).
+// whatsapp: apenas dígitos com código do país e DDD, ex: "5566999999999"
+export const site = {
+  whatsapp: "",
+  linkedin: "",
+};
+
 export type Project = {
   name: string;
   role: string;
@@ -29,25 +36,56 @@ export type Stat = {
   description: string;
 };
 
+// Compromissos de entrega — não histórico. Trocar por métricas reais
+// conforme os projetos gerarem dados verificáveis.
 export const stats: Stat[] = [
   {
     value: "98+",
     title: "Google Lighthouse",
-    description: "Core Web Vitals em estado de excelência garantido.",
-  },
-  {
-    value: "40%",
-    title: "Lower Bounce Rate",
-    description: "Velocidade que retém o usuário desde o primeiro segundo.",
-  },
-  {
-    value: "120ms",
-    title: "Server Response",
-    description: "Infraestrutura Edge para carregamento instantâneo.",
+    description: "Meta mínima de performance, auditada pelo próprio Google, em todo site que entrego.",
   },
   {
     value: "100%",
-    title: "Design Customizado",
-    description: "Visual exclusivo, sem templates ou atalhos.",
+    title: "Design exclusivo",
+    description: "Nenhum template. Cada site é desenhado do zero para o seu negócio.",
+  },
+  {
+    value: "<1s",
+    title: "Primeiro carregamento",
+    description: "Arquitetura moderna para o site abrir no ato — inclusive no 4G.",
+  },
+  {
+    value: "24h",
+    title: "Resposta garantida",
+    description: "Todo pedido de orçamento respondido em até 24 horas úteis.",
+  },
+];
+
+export type ProcessStep = {
+  number: string;
+  title: string;
+  description: string;
+};
+
+export const processSteps: ProcessStep[] = [
+  {
+    number: "01",
+    title: "Diagnóstico",
+    description: "Uma conversa direta para entender seu negócio, seus clientes e o que o site precisa gerar: ligações, agendamentos ou vendas.",
+  },
+  {
+    number: "02",
+    title: "Design exclusivo",
+    description: "Desenho o site do zero para a sua marca — você aprova o visual antes de qualquer linha de código.",
+  },
+  {
+    number: "03",
+    title: "Construção e lançamento",
+    description: "Desenvolvimento com performance auditada pelo Google Lighthouse e SEO local configurado desde o primeiro dia.",
+  },
+  {
+    number: "04",
+    title: "Acompanhamento",
+    description: "Site no ar não é o fim: ajustes finos e suporte para ele continuar rápido e vendendo.",
   },
 ];

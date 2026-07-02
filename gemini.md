@@ -26,7 +26,9 @@
 - **Tipografia:** `Inter` (Sans) para corpo e navegação. `Montserrat` (apenas pesos 700 e 900, sem itálico) para display/títulos. Labels e navegação em caixa alta com `tracking-widest`.
 - **Layout:** Hero assimétrico em grid de 12 colunas (8+4). Seções numeradas (01/02/03). Texto gigante de fundo como marca d'água decorativa (sempre `aria-hidden`). Sem textos centralizados no Hero.
 - **Ícones:** Sempre `lucide-react` — nunca SVG inline manual.
-- **Física:** `stiffness: 100, damping: 20` para todas as molas.
+- **Física:** `stiffness: 100, damping: 20` para todas as molas. `prefers-reduced-motion` respeitado via `<MotionProvider>`.
+- **Idioma e voz:** Toda a copy em português brasileiro, primeira pessoa do singular ("Transformo", "Respondo"). Inglês só em nomes próprios (Google Lighthouse). O CTA se chama "Solicitar orçamento" do header ao botão final.
+- **Honestidade:** Números públicos são compromissos de entrega ou métricas verificáveis — nunca histórico inventado. Dados reais entram em `lib/data.ts` conforme surgirem.
 
 ## 5. Log de Manutenção
 | Data | Evento | Estado |
@@ -34,3 +36,4 @@
 | 02/07/2026 | Inicialização do projeto VLAEG | ✅ |
 | 02/07/2026 | Rebrand FORGE (Stitch design): novas cores, Inter/Montserrat, layout assimétrico | ✅ |
 | 02/07/2026 | Varredura de consistência: tokens @theme corrigidos, nav mobile restaurada, dados em `lib/data.ts`, constituição atualizada | ✅ |
+| 02/07/2026 | Revisão de frontend/copy: copy 100% PT, stats como compromissos, seções Processo e Footer, metadata/OG, reduced-motion, WhatsApp/LinkedIn configuráveis em `lib/data.ts` | ✅ |
