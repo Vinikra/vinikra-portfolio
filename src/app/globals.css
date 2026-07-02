@@ -1,18 +1,20 @@
 @import "tailwindcss";
 
 @theme {
-  --color-ink: #09090B;
-  --color-paper: #18181B;
-  --color-accent: #FAFAFA;
-  --color-slate: #A1A1AA;
+  --color-surface: #121414;
+  --color-surface-container: #1e2020;
+  --color-primary-container: #c3f400;
+  --color-on-primary-fixed: #161e00;
+  --color-on-surface: #e2e2e2;
+  --color-on-surface-variant: #c4c9ac;
   
-  --font-sans: var(--font-geist-sans), Arial, Helvetica, sans-serif;
-  --font-serif: var(--font-instrument-serif), Georgia, serif;
+  --font-sans: var(--font-inter), Arial, Helvetica, sans-serif;
+  --font-display: var(--font-montserrat), Georgia, serif;
 }
 
 :root {
-  --background: #09090B;
-  --foreground: #FAFAFA;
+  --background: #121414;
+  --foreground: #e2e2e2;
 }
 
 body {
@@ -25,8 +27,8 @@ body {
 
 /* Custom Utilities for smooth scroll & selection */
 ::selection {
-  background-color: #FAFAFA;
-  color: #09090B;
+  background-color: #c3f400;
+  color: #161e00;
 }
 
 html {

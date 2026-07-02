@@ -40,7 +40,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-32 px-6 bg-ink relative border-t border-white/5">
+    <section id="contact" className="py-32 px-6 md:px-20 bg-surface relative border-t border-white/5">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -48,68 +48,68 @@ export default function Contact() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ type: "spring", stiffness: 100, damping: 20 }}
         >
-          <span className="text-slate uppercase tracking-widest text-xs font-semibold mb-6 block">
-            Iniciar um projeto
+          <span className="text-primary-container uppercase tracking-widest text-xs font-semibold mb-6 block">
+            03 — Iniciar um projeto
           </span>
-          <h2 className="font-serif text-5xl sm:text-7xl mb-16 tracking-tight leading-none">
-            Vamos construir algo <span className="italic text-slate">memorável.</span>
+          <h2 className="font-display text-5xl sm:text-7xl mb-16 font-black tracking-tight leading-none text-foreground">
+            Vamos construir algo <span className="text-primary-container">memorável.</span>
           </h2>
 
           {status === "success" ? (
             <motion.div 
               initial={{ opacity: 0, scale: 0.9 }} 
               animate={{ opacity: 1, scale: 1 }} 
-              className="p-8 border border-white/10 bg-paper rounded-2xl"
+              className="p-8 border border-primary-container/20 bg-surface-container rounded-2xl"
             >
-              <h3 className="text-2xl font-serif mb-2">Mensagem enviada com sucesso!</h3>
-              <p className="text-slate">Retornarei o contato em breve para discutirmos o seu projeto.</p>
+              <h3 className="text-2xl font-display font-bold mb-2 text-foreground">Mensagem enviada com sucesso!</h3>
+              <p className="text-on-surface-variant">Retornarei o contato em breve para discutirmos o seu projeto.</p>
             </motion.div>
           ) : (
             <form onSubmit={handleSubmit} className="flex flex-col gap-8 max-w-2xl">
               <div className="flex flex-col gap-2">
-                <label htmlFor="name" className="text-sm font-medium text-slate">Nome completo</label>
+                <label htmlFor="name" className="text-sm font-semibold text-on-surface-variant uppercase tracking-widest">Nome completo</label>
                 <input 
                   type="text" 
                   id="name" 
                   name="name" 
                   required
-                  className="bg-transparent border-b border-white/10 pb-4 outline-none focus:border-accent transition-colors text-lg"
+                  className="bg-transparent border-b border-white/10 pb-4 outline-none focus:border-primary-container transition-colors text-lg text-foreground"
                   placeholder="Seu nome ou da sua empresa"
                 />
               </div>
 
               <div className="flex flex-col gap-2">
-                <label htmlFor="email" className="text-sm font-medium text-slate">E-mail corporativo</label>
+                <label htmlFor="email" className="text-sm font-semibold text-on-surface-variant uppercase tracking-widest">E-mail corporativo</label>
                 <input 
                   type="email" 
                   id="email" 
                   name="email" 
                   required
-                  className="bg-transparent border-b border-white/10 pb-4 outline-none focus:border-accent transition-colors text-lg"
+                  className="bg-transparent border-b border-white/10 pb-4 outline-none focus:border-primary-container transition-colors text-lg text-foreground"
                   placeholder="voce@empresa.com"
                 />
               </div>
 
               <div className="flex flex-col gap-2">
-                <label htmlFor="phone" className="text-sm font-medium text-slate">WhatsApp / Telefone</label>
+                <label htmlFor="phone" className="text-sm font-semibold text-on-surface-variant uppercase tracking-widest">WhatsApp / Telefone</label>
                 <input 
                   type="tel" 
                   id="phone" 
                   name="phone" 
                   required
-                  className="bg-transparent border-b border-white/10 pb-4 outline-none focus:border-accent transition-colors text-lg"
+                  className="bg-transparent border-b border-white/10 pb-4 outline-none focus:border-primary-container transition-colors text-lg text-foreground"
                   placeholder="(66) 99999-9999"
                 />
               </div>
 
               <div className="flex flex-col gap-2">
-                <label htmlFor="message" className="text-sm font-medium text-slate">Detalhes do projeto</label>
+                <label htmlFor="message" className="text-sm font-semibold text-on-surface-variant uppercase tracking-widest">Detalhes do projeto</label>
                 <textarea 
                   id="message" 
                   name="message" 
                   required
                   rows={4}
-                  className="bg-transparent border-b border-white/10 pb-4 outline-none focus:border-accent transition-colors text-lg resize-none"
+                  className="bg-transparent border-b border-white/10 pb-4 outline-none focus:border-primary-container transition-colors text-lg resize-none text-foreground"
                   placeholder="Conte-me sobre o que você deseja construir e quais são os objetivos de negócio."
                 />
               </div>
@@ -121,7 +121,7 @@ export default function Contact() {
               <button 
                 type="submit" 
                 disabled={status === "loading"}
-                className="self-start inline-flex items-center justify-center h-14 px-10 rounded-full bg-accent text-ink font-semibold hover:-translate-y-1 transition-transform duration-300 disabled:opacity-50 disabled:hover:translate-y-0"
+                className="self-start inline-flex items-center justify-center h-16 px-10 rounded-full bg-primary-container text-on-primary-fixed font-black hover:-translate-y-1 transition-transform duration-300 disabled:opacity-50 disabled:hover:translate-y-0 text-lg"
               >
                 {status === "loading" ? "Enviando..." : "Enviar mensagem"}
               </button>

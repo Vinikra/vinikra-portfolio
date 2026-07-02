@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Instrument_Serif } from "next/font/google";
+import { Inter, Montserrat } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
   subsets: ["latin"],
+  variable: "--font-inter",
 });
 
-const instrumentSerif = Instrument_Serif({
-  weight: ["400"],
+const montserrat = Montserrat({
+  weight: ["400", "700", "800", "900"],
   style: ["normal", "italic"],
   subsets: ["latin"],
-  variable: "--font-instrument-serif",
+  variable: "--font-montserrat",
 });
 
 export const metadata: Metadata = {
@@ -27,9 +27,9 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${geistSans.variable} ${instrumentSerif.variable} h-full antialiased bg-ink text-accent`}
+      className={`${inter.variable} ${montserrat.variable} h-full antialiased bg-surface text-foreground`}
     >
-      <body className="min-h-full flex flex-col font-sans selection:bg-accent selection:text-ink">
+      <body className="min-h-full flex flex-col font-sans selection:bg-primary-container selection:text-on-primary-fixed">
         {children}
       </body>
     </html>

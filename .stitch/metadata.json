@@ -1,0 +1,21 @@
+{
+  "projectId": "8595401470035917752",
+  "title": "Stitch Project",
+  "screens": {
+    "b340d5f35305469e901aff68754368f4": {
+      "title": "contato_e_proposta",
+      "width": 1440,
+      "height": 900
+    },
+    "2ef32513807649b699f7980c22436147": {
+      "title": "home_projetos",
+      "width": 1440,
+      "height": 900
+    },
+    "ba9e1c8b6d8b42829e62dc21e8178b72": {
+      "title": "processo_e_resultados",
+      "width": 1440,
+      "height": 900
+    }
+  }
+}

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FORGE® // Process &amp; Results</title>
+<!-- External Fonts and Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-container": "#556d00",
+                    "tertiary": "#ffffff",
+                    "primary-fixed-dim": "#abd600",
+                    "secondary-fixed": "#e5e2e1",
+                    "primary-fixed": "#c3f400",
+                    "on-surface": "#e2e2e2",
+                    "secondary": "#c9c6c5",
+                    "on-primary-fixed-variant": "#3c4d00",
+                    "on-background": "#e2e2e2",
+                    "tertiary-fixed": "#e5e2e1",
+                    "tertiary-fixed-dim": "#c8c6c5",
+                    "inverse-on-surface": "#2f3131",
+                    "secondary-container": "#4a4949",
+                    "on-primary": "#283500",
+                    "inverse-surface": "#e2e2e2",
+                    "surface-container-high": "#282a2b",
+                    "on-surface-variant": "#c4c9ac",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "surface-dim": "#121414",
+                    "inverse-primary": "#506600",
+                    "tertiary-container": "#e5e2e1",
+                    "surface-container": "#1e2020",
+                    "on-error-container": "#ffdad6",
+                    "on-tertiary": "#313030",
+                    "surface-container-highest": "#333535",
+                    "surface-tint": "#abd600",
+                    "error": "#ffb4ab",
+                    "secondary-fixed-dim": "#c9c6c5",
+                    "primary-container": "#c3f400",
+                    "on-tertiary-fixed-variant": "#474646",
+                    "surface-variant": "#333535",
+                    "surface-container-lowest": "#0c0f0f",
+                    "outline": "#8e9379",
+                    "surface-bright": "#37393a",
+                    "error-container": "#93000a",
+                    "on-secondary": "#313030",
+                    "surface-container-low": "#1a1c1c",
+                    "on-primary-fixed": "#161e00",
+                    "on-error": "#690005",
+                    "on-secondary-fixed-variant": "#474646",
+                    "on-tertiary-container": "#656464",
+                    "on-secondary-container": "#bab8b7",
+                    "outline-variant": "#444933",
+                    "surface": "#121414",
+                    "primary": "#ffffff",
+                    "on-tertiary-fixed": "#1c1b1b",
+                    "background": "#121414"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "32px",
+                    "stack-md": "24px",
+                    "stack-lg": "48px",
+                    "stack-sm": "8px",
+                    "section-gap": "160px",
+                    "margin-mobile": "24px",
+                    "margin-desktop": "80px"
+            },
+            "fontFamily": {
+                    "display-lg-mobile": ["Montserrat"],
+                    "body-md": ["Inter"],
+                    "display-xl": ["Montserrat"],
+                    "label-sm": ["Inter"],
+                    "headline-md": ["Montserrat"],
+                    "body-lg": ["Inter"],
+                    "display-lg": ["Montserrat"]
+            },
+            "fontSize": {
+                    "display-lg-mobile": ["48px", { "lineHeight": "115%", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                    "body-md": ["16px", { "lineHeight": "160%", "fontWeight": "400" }],
+                    "display-xl": ["120px", { "lineHeight": "110%", "letterSpacing": "-0.04em", "fontWeight": "800" }],
+                    "label-sm": ["12px", { "lineHeight": "100%", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                    "headline-md": ["40px", { "lineHeight": "120%", "fontWeight": "700" }],
+                    "body-lg": ["20px", { "lineHeight": "160%", "fontWeight": "400" }],
+                    "display-lg": ["80px", { "lineHeight": "110%", "letterSpacing": "-0.03em", "fontWeight": "800" }]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #121414;
+            color: #e2e2e2;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .ghost-border {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .hover-slide-btn {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .hover-slide-btn:hover {
+            transform: translateY(-2px);
+        }
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal-on-scroll.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<!-- Top Navigation Anchor -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-white/10 flex justify-between items-center px-6 md:px-margin-desktop h-20">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary-container" data-icon="terminal">terminal</span>
+<span class="font-display-lg-mobile text-body-lg font-black tracking-tighter text-on-surface">FORGE®</span>
+</div>
+<nav class="hidden md:flex gap-10 items-center">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary-container transition-colors duration-300" href="#">Mission</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary-container transition-colors duration-300" href="#">Numbers</a>
+<a class="font-label-sm text-label-sm text-primary-container font-bold transition-colors duration-300" href="#">Process</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary-container transition-colors duration-300" href="#">Portfolio</a>
+<a class="px-6 py-2 bg-primary-container text-on-primary font-bold text-label-sm rounded-full transition-transform active:scale-95" href="#">Pitch</a>
+</nav>
+<div class="md:hidden">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</div>
+</header>
+<main class="pt-32 pb-section-gap">
+<!-- Section 01: The Process (How we work) -->
+<section class="px-margin-mobile md:px-margin-desktop mb-section-gap">
+<div class="flex flex-col md:flex-row justify-between items-start mb-20 gap-10">
+<div class="max-w-2xl">
+<span class="font-label-sm text-label-sm text-primary-container tracking-widest mb-4 block">02 — PROCESS</span>
+<h1 class="font-display-xl text-display-lg-mobile md:text-display-xl mb-6">How we <br/>forge.</h1>
+</div>
+<div class="hidden md:block text-right pt-12">
+<p class="font-label-sm text-label-sm text-on-surface-variant">Cycle: 0 → 1 in 90 days</p>
+</div>
+</div>
+<!-- Stepped Process Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-20">
+<!-- Step 01: Discover -->
+<div class="md:col-span-12 group ghost-border bg-surface-container-low p-10 hover:bg-surface-container transition-colors duration-500">
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
+<div class="flex items-start gap-8">
+<span class="font-display-lg text-headline-md text-primary-container/30">01</span>
+<div>
+<h3 class="font-display-lg text-headline-md mb-2">Discover</h3>
+<p class="text-on-surface-variant max-w-md">We sit with founders. Define the wedge, find the first 100 users worth chasing.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-12 h-12 flex items-center justify-center rounded-full ghost-border group-hover:bg-primary-container group-hover:text-black transition-all">
+<span class="material-symbols-outlined" data-icon="insights">insights</span>
+</div>
+<span class="material-symbols-outlined text-4xl" data-icon="arrow_outward">arrow_outward</span>
+</div>
+</div>
+</div>
+<!-- Step 02 & 03: Build & Launch -->
+<div class="md:col-span-6 group ghost-border bg-surface-container-low p-10 hover:bg-surface-container transition-colors duration-500">
+<span class="font-display-lg text-headline-md text-primary-container/30 block mb-6">02</span>
+<h3 class="font-display-lg text-headline-md mb-2">Build</h3>
+<p class="text-on-surface-variant mb-10">Design + engineering muscle. Prototype to MVP in 4 weeks, not 4 months.</p>
+<div class="w-full h-1 bg-white/5 overflow-hidden">
+<div class="w-1/2 h-full bg-primary-container transition-all group-hover:w-full duration-700"></div>
+</div>
+</div>
+<div class="md:col-span-6 group ghost-border bg-surface-container-low p-10 hover:bg-surface-container transition-colors duration-500">
+<span class="font-display-lg text-headline-md text-primary-container/30 block mb-6">03</span>
+<h3 class="font-display-lg text-headline-md mb-2">Launch</h3>
+<p class="text-on-surface-variant mb-10">Go-to-market scaffolding. First 1,000 users in 6 weeks via owned channels.</p>
+<div class="flex gap-2">
+<span class="px-3 py-1 text-[10px] uppercase border border-primary-container text-primary-container rounded">SEO</span>
+<span class="px-3 py-1 text-[10px] uppercase border border-primary-container text-primary-container rounded">VIRAL</span>
+<span class="px-3 py-1 text-[10px] uppercase border border-primary-container text-primary-container rounded">PR</span>
+</div>
+</div>
+<!-- Step 04: Scale -->
+<div class="md:col-span-12 group ghost-border bg-surface-container-low p-10 hover:bg-surface-container transition-colors duration-500">
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
+<div class="flex items-start gap-8">
+<span class="font-display-lg text-headline-md text-primary-container/30">04</span>
+<div>
+<h3 class="font-display-lg text-headline-md mb-2">Scale</h3>
+<p class="text-on-surface-variant max-w-md">Hands-on growth. Open the door to seed once the wedge is proven.</p>
+</div>
+</div>
+<div class="w-full md:w-auto flex items-center gap-6">
+<div class="h-[2px] flex-grow md:w-48 bg-primary-container shadow-[0_0_15px_rgba(195,244,0,0.5)]"></div>
+<span class="material-symbols-outlined text-4xl text-primary-container" data-icon="trending_up">trending_up</span>
+</div>
+</div>
+</div>
+</div>
+<!-- High Impact Callout -->
+<div class="bg-primary-container p-12 md:p-20 flex flex-col md:flex-row justify-between items-center gap-10">
+<div>
+<h2 class="font-display-xl text-display-lg-mobile md:text-headline-md text-on-primary flex items-baseline gap-4">
+                        0 <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span> 1
+                        <span class="font-label-sm text-on-primary opacity-60 ml-2">90 DAYS</span>
+</h2>
+</div>
+<div class="grid grid-cols-3 gap-12 w-full md:w-auto">
+<div>
+<p class="font-display-lg text-body-lg text-on-primary mb-1">01</p>
+<p class="font-label-sm text-label-sm text-on-primary font-black">VALIDATE</p>
+</div>
+<div>
+<p class="font-display-lg text-body-lg text-on-primary mb-1">02</p>
+<p class="font-label-sm text-label-sm text-on-primary font-black">BUILD</p>
+</div>
+<div>
+<p class="font-display-lg text-body-lg text-on-primary mb-1">03</p>
+<p class="font-label-sm text-label-sm text-on-primary font-black">LAUNCH</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 02: Results (By the Numbers) -->
+<section class="px-margin-mobile md:px-margin-desktop bg-surface-container-lowest py-section-gap">
+<div class="mb-20">
+<span class="font-label-sm text-label-sm text-primary-container tracking-widest mb-4 block">01 — BY THE NUMBERS</span>
+<h2 class="font-display-xl text-display-lg-mobile md:text-display-xl">What we built<br/>in year one.</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-24 border-t border-white/10 pt-16">
+<!-- Result 01 -->
+<div class="flex flex-col gap-6">
+<div class="font-display-xl text-display-lg text-white">47</div>
+<div>
+<h4 class="font-headline-md text-body-lg mb-2">Companies funded</h4>
+<p class="text-on-surface-variant font-label-sm text-label-sm">since launch in 2024</p>
+</div>
+<p class="text-on-surface-variant pt-8 text-sm">Initial checks from $150k to $750k. Follow-on reserved for teams with proof. We fund product, distribution and hiring.</p>
+</div>
+<!-- Result 02 -->
+<div class="flex flex-col gap-6">
+<div class="font-display-xl text-display-lg text-white">$14M</div>
+<div>
+<h4 class="font-headline-md text-body-lg mb-2">Portfolio ARR</h4>
+<p class="text-on-surface-variant font-label-sm text-label-sm">active across 18 companies</p>
+</div>
+<p class="text-on-surface-variant pt-8 text-sm">Product strategy, brand and UX in one pod. Full-stack engineering ships the first version. Analytics are wired before launch.</p>
+</div>
+<!-- Result 03 -->
+<div class="flex flex-col gap-6">
+<div class="font-display-xl text-display-lg text-white">90</div>
+<div>
+<h4 class="font-headline-md text-body-lg mb-2">Days to first users</h4>
+<p class="text-on-surface-variant font-label-sm text-label-sm">median from kickoff</p>
+</div>
+<p class="text-on-surface-variant pt-8 text-sm">Founder-led sales starts before the MVP. Waitlists and partner channels are tested early. Launch plans focus on repeatable demand.</p>
+</div>
+<!-- Result 04 -->
+<div class="flex flex-col gap-6">
+<div class="font-display-xl text-display-lg text-white">8x</div>
+<div>
+<h4 class="font-headline-md text-body-lg mb-2">Valuation lift</h4>
+<p class="text-on-surface-variant font-label-sm text-label-sm">at next round (avg.)</p>
+</div>
+<p class="text-on-surface-variant pt-8 text-sm">We shape the investor narrative with data. Data rooms and metrics models stay current. Seed prep starts before the round opens.</p>
+</div>
+</div>
+<!-- Snapshot Details -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-20 border-t border-white/5 pt-16">
+<div class="reveal-on-scroll">
+<span class="font-label-sm text-primary-container mb-4 block">01 VALIDATE</span>
+<p class="text-on-surface-variant">Customer calls, ICP map, landing page and first demand signal. Offer wedge, pricing signal and founder narrative. Proof points are captured before building.</p>
+</div>
+<div class="reveal-on-scroll" style="transition-delay: 0.1s">
+<span class="font-label-sm text-primary-container mb-4 block">02 BUILD</span>
+<p class="text-on-surface-variant">Prototype, MVP, analytics, onboarding and pricing test. Product, brand and growth ship in one sprint loop. Usage data shapes the next build cycle.</p>
+</div>
+<div class="reveal-on-scroll" style="transition-delay: 0.2s">
+<span class="font-label-sm text-primary-container mb-4 block">03 LAUNCH</span>
+<p class="text-on-surface-variant">First pilots, owned channels and founder-led sales motion. Retention, activation and pipeline are reviewed weekly. Seed materials are built from live evidence.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Mobile -->
+<nav class="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] rounded-full bg-surface-container-highest/90 backdrop-blur-xl border border-white/5 flex justify-around items-center py-2 px-4 shadow-2xl z-50">
+<div class="text-on-surface-variant p-3"><span class="material-symbols-outlined" data-icon="home_storage">home_storage</span></div>
+<div class="text-on-surface-variant p-3"><span class="material-symbols-outlined" data-icon="work_outline">work_outline</span></div>
+<div class="bg-primary-container text-on-primary-container rounded-full p-3 scale-90"><span class="material-symbols-outlined" data-icon="account_tree">account_tree</span></div>
+<div class="text-on-surface-variant p-3"><span class="material-symbols-outlined" data-icon="mail">mail</span></div>
+</nav>
+<!-- Footer -->
+<footer class="px-margin-mobile md:px-margin-desktop py-stack-lg flex flex-col gap-gutter border-t border-white/10 mt-section-gap">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-10">
+<div>
+<h2 class="font-display-lg-mobile text-headline-md text-on-surface mb-2">FORGE®</h2>
+<p class="text-on-surface-variant font-label-sm">STARTUP STUDIO &amp; PRE-SEED FUND</p>
+</div>
+<div class="flex flex-wrap gap-8">
+<a class="font-label-sm text-on-surface-variant hover:text-white underline decoration-primary-container decoration-2 underline-offset-4 transition-all" href="#">Case Studies</a>
+<a class="font-label-sm text-on-surface-variant hover:text-white underline decoration-primary-container decoration-2 underline-offset-4 transition-all" href="#">Process</a>
+<a class="font-label-sm text-on-surface-variant hover:text-white underline decoration-primary-container decoration-2 underline-offset-4 transition-all" href="#">WhatsApp</a>
+<a class="font-label-sm text-on-surface-variant hover:text-white underline decoration-primary-container decoration-2 underline-offset-4 transition-all" href="#">LinkedIn</a>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center pt-10 border-t border-white/5 gap-4">
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 FORGE STUDIO. ALL RIGHTS RESERVED.</p>
+<div class="flex gap-4 items-center">
+<div class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></div>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Berlin · Lisbon · Remote</p>
+</div>
+</div>
+</footer>
+<script>
+        // Reveal on scroll functionality
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+
+        // Micro-interaction for numbers counting (simplified)
+        function animateValue(obj, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                obj.innerHTML = Math.floor(progress * (end - start) + start);
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+
+        // Trigger animations when in view
+        const resultsSection = document.querySelector('.grid-cols-4');
+        let animated = false;
+        
+        const resultsObserver = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting && !animated) {
+                // Logic to trigger counting would go here
+                animated = true;
+            }
+        });
+        
+        if (resultsSection) resultsObserver.observe(resultsSection);
+    </script>
+</body></html>
