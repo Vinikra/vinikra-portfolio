@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -15,7 +16,7 @@ export default function Hero() {
           <span className="text-primary-container uppercase tracking-widest text-xs font-semibold mb-6 block">
             Vinícius Krasnievicz — Performance Digital Engineering
           </span>
-          <h1 className="font-display text-[clamp(3.5rem,8vw,7.5rem)] font-black leading-[1.05] sm:leading-[0.95] tracking-tight text-foreground">
+          <h1 className="font-display text-[clamp(2.75rem,8vw,7.5rem)] font-black leading-[1.05] sm:leading-[0.95] tracking-tight text-foreground">
             Transformo sites em <br className="hidden md:block" />
             <span className="text-primary-container">máquinas</span> de conversão.
           </h1>
@@ -32,24 +33,22 @@ export default function Hero() {
           </p>
           <a href="#contact" className="inline-flex items-center justify-center h-14 sm:h-16 px-8 sm:px-10 rounded-full bg-primary-container text-on-primary-fixed font-black hover:-translate-y-1 transition-transform duration-300 gap-4 group">
             Solicitar Orçamento
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-1 transition-transform">
-              <path d="M5 12h14"></path>
-              <path d="m12 5 7 7-7 7"></path>
-            </svg>
+            <ArrowRight size={24} className="group-hover:translate-x-1 transition-transform" />
           </a>
         </motion.div>
       </div>
 
       {/* Large Background Label */}
-      <motion.div 
+      <motion.div
+        aria-hidden="true"
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.03 }}
         transition={{ delay: 1, duration: 2 }}
         className="absolute -bottom-10 left-0 w-full select-none pointer-events-none"
       >
-        <h2 className="font-display text-[24vw] leading-none whitespace-nowrap font-black text-foreground">
+        <span className="block font-display text-[24vw] leading-none whitespace-nowrap font-black text-foreground">
           VINIKRA® PERFORMANCE
-        </h2>
+        </span>
       </motion.div>
 
       {/* Neon Accent Glow */}

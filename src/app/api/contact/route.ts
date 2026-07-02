@@ -24,6 +24,7 @@ export async function POST(req: Request) {
 
     return NextResponse.json({ success: true, data }, { status: 200 });
   } catch (error) {
+    console.error("Contact API error:", error);
     return NextResponse.json({ error: "Erro interno no servidor." }, { status: 500 });
   }
 }

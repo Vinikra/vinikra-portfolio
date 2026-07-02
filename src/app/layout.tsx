@@ -8,8 +8,7 @@ const inter = Inter({
 });
 
 const montserrat = Montserrat({
-  weight: ["400", "700", "800", "900"],
-  style: ["normal", "italic"],
+  weight: ["700", "900"],
   subsets: ["latin"],
   variable: "--font-montserrat",
 });

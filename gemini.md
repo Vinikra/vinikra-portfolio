@@ -6,7 +6,7 @@
 - **Regra de Ouro:** NENHUM código genérico. O site deve seguir os padrões de "Taste Design" (Premium, animações físicas de mola, tipografia estruturada). O portfólio não é apenas onde o trabalho vive, o portfólio É o trabalho.
 
 ## 2. Arquitetura (Camadas)
-- **Frontend:** Next.js 14 (App Router), React, Tailwind CSS, Framer Motion.
+- **Frontend:** Next.js 16 (App Router), React 19, Tailwind CSS v4, Framer Motion.
 - **Backend / Integrações:** Next.js API Routes (`/api/contact`) + Resend.
 - **Fonte da Verdade:** Dados de projetos (`lib/data.ts`) estáticos. Como o desenvolvedor é o único dono, um CMS seria overengineering.
 
@@ -21,13 +21,16 @@
 }
 ```
 
-## 4. Invariantes Visuais (Taste Design)
-- **Cores:** Fundo principal `#09090B` (Charcoal Ink), Superfície `#18181B`. Acento `#FAFAFA` (Off-White). NUNCA usar preto puro `#000000`. Sem botões neon.
-- **Tipografia:** `Geist` (Sans) para o corpo e navegação. `Instrument Serif` (ou similar) em itálico para contraste de luxo. Proibido usar Inter.
-- **Layout:** Sem grid simétrica de 3 colunas padrão. Sem textos centralizados no Hero. Usar imagens inline nas fontes.
+## 4. Invariantes Visuais (FORGE Design)
+- **Cores (tokens no `@theme` de `globals.css` — única fonte de verdade):** Fundo `#121414` (background/surface), Containers `#1e2020` (surface-container). Acento `#c3f400` (primary-container) com texto `#161e00` (on-primary-fixed) sobre ele. Texto principal `#e2e2e2` (foreground), secundário `#c4c9ac` (on-surface-variant). NUNCA usar preto puro `#000000`. NUNCA hardcodar hex nos componentes — sempre via token.
+- **Tipografia:** `Inter` (Sans) para corpo e navegação. `Montserrat` (apenas pesos 700 e 900, sem itálico) para display/títulos. Labels e navegação em caixa alta com `tracking-widest`.
+- **Layout:** Hero assimétrico em grid de 12 colunas (8+4). Seções numeradas (01/02/03). Texto gigante de fundo como marca d'água decorativa (sempre `aria-hidden`). Sem textos centralizados no Hero.
+- **Ícones:** Sempre `lucide-react` — nunca SVG inline manual.
 - **Física:** `stiffness: 100, damping: 20` para todas as molas.
 
 ## 5. Log de Manutenção
 | Data | Evento | Estado |
 |---|---|---|
 | 02/07/2026 | Inicialização do projeto VLAEG | ✅ |
+| 02/07/2026 | Rebrand FORGE (Stitch design): novas cores, Inter/Montserrat, layout assimétrico | ✅ |
+| 02/07/2026 | Varredura de consistência: tokens @theme corrigidos, nav mobile restaurada, dados em `lib/data.ts`, constituição atualizada | ✅ |

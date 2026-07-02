@@ -3,6 +3,9 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
+const labelClass = "text-sm font-semibold text-on-surface-variant uppercase tracking-widest";
+const fieldClass = "bg-transparent border-b border-white/10 pb-4 outline-none focus:border-primary-container transition-colors text-lg text-foreground";
+
 export default function Contact() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
@@ -30,7 +33,6 @@ export default function Contact() {
       } else {
         const errorData = await res.json();
         console.error("Resend Error:", errorData);
-        alert(`Erro da API: ${errorData.error}`);
         setStatus("error");
       }
     } catch (err) {
@@ -67,49 +69,49 @@ export default function Contact() {
           ) : (
             <form onSubmit={handleSubmit} className="flex flex-col gap-8 max-w-2xl">
               <div className="flex flex-col gap-2">
-                <label htmlFor="name" className="text-sm font-semibold text-on-surface-variant uppercase tracking-widest">Nome completo</label>
-                <input 
-                  type="text" 
-                  id="name" 
-                  name="name" 
+                <label htmlFor="name" className={labelClass}>Nome completo</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
                   required
-                  className="bg-transparent border-b border-white/10 pb-4 outline-none focus:border-primary-container transition-colors text-lg text-foreground"
+                  className={fieldClass}
                   placeholder="Seu nome ou da sua empresa"
                 />
               </div>
 
               <div className="flex flex-col gap-2">
-                <label htmlFor="email" className="text-sm font-semibold text-on-surface-variant uppercase tracking-widest">E-mail corporativo</label>
-                <input 
-                  type="email" 
-                  id="email" 
-                  name="email" 
+                <label htmlFor="email" className={labelClass}>E-mail corporativo</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
                   required
-                  className="bg-transparent border-b border-white/10 pb-4 outline-none focus:border-primary-container transition-colors text-lg text-foreground"
+                  className={fieldClass}
                   placeholder="voce@empresa.com"
                 />
               </div>
 
               <div className="flex flex-col gap-2">
-                <label htmlFor="phone" className="text-sm font-semibold text-on-surface-variant uppercase tracking-widest">WhatsApp / Telefone</label>
-                <input 
-                  type="tel" 
-                  id="phone" 
-                  name="phone" 
+                <label htmlFor="phone" className={labelClass}>WhatsApp / Telefone</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
                   required
-                  className="bg-transparent border-b border-white/10 pb-4 outline-none focus:border-primary-container transition-colors text-lg text-foreground"
+                  className={fieldClass}
                   placeholder="(66) 99999-9999"
                 />
               </div>
 
               <div className="flex flex-col gap-2">
-                <label htmlFor="message" className="text-sm font-semibold text-on-surface-variant uppercase tracking-widest">Detalhes do projeto</label>
-                <textarea 
-                  id="message" 
-                  name="message" 
+                <label htmlFor="message" className={labelClass}>Detalhes do projeto</label>
+                <textarea
+                  id="message"
+                  name="message"
                   required
                   rows={4}
-                  className="bg-transparent border-b border-white/10 pb-4 outline-none focus:border-primary-container transition-colors text-lg resize-none text-foreground"
+                  className={`${fieldClass} resize-none`}
                   placeholder="Conte-me sobre o que você deseja construir e quais são os objetivos de negócio."
                 />
               </div>

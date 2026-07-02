@@ -1,23 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-
-const projects = [
-  {
-    name: "Aliança Inglesa",
-    role: "Full-Stack & UX",
-    description: "Landing page de altíssima performance focada em captação de leads. Combina design premium com técnicas pesadas de conversão local.",
-    link: "https://alianca-inglesa.vercel.app",
-    color: "#c3f400", // neon green
-  },
-  {
-    name: "Olhar Estoico",
-    role: "Frontend Engineering",
-    description: "Plataforma projetada para máxima retenção visual, com foco na entrega de conteúdo filosófico através de uma experiência imersiva.",
-    link: "https://olharestoico.com.br",
-    color: "#e2e2e2", // light
-  }
-];
+import { projects, stats } from "@/lib/data";
 
 export default function Work() {
   return (
@@ -31,31 +15,18 @@ export default function Work() {
             <h2 className="font-display text-4xl md:text-5xl font-bold max-w-2xl text-foreground">O que entregamos em cada projeto.</h2>
           </div>
           <div className="text-on-surface-variant text-sm uppercase tracking-widest font-semibold border border-white/10 px-4 py-2 rounded-full">
-            Snapshot — Q4 2024
+            Snapshot — Q3 2026
           </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/10 pt-12 mb-32">
-          <div>
-            <span className="font-display text-6xl font-black leading-none block mb-4 text-primary-container">98+</span>
-            <h3 className="font-display text-xl font-bold mb-2 text-foreground">Google Lighthouse</h3>
-            <p className="text-on-surface-variant text-base">Core Web Vitals em estado de excelência garantido.</p>
-          </div>
-          <div>
-            <span className="font-display text-6xl font-black leading-none block mb-4 text-primary-container">40%</span>
-            <h3 className="font-display text-xl font-bold mb-2 text-foreground">Lower Bounce Rate</h3>
-            <p className="text-on-surface-variant text-base">Velocidade que retém o usuário desde o primeiro segundo.</p>
-          </div>
-          <div>
-            <span className="font-display text-6xl font-black leading-none block mb-4 text-primary-container">120ms</span>
-            <h3 className="font-display text-xl font-bold mb-2 text-foreground">Server Response</h3>
-            <p className="text-on-surface-variant text-base">Infraestrutura Edge para carregamento instantâneo.</p>
-          </div>
-          <div>
-            <span className="font-display text-6xl font-black leading-none block mb-4 text-primary-container">100%</span>
-            <h3 className="font-display text-xl font-bold mb-2 text-foreground">Design Customizado</h3>
-            <p className="text-on-surface-variant text-base">Visual exclusivo, sem templates ou atalhos.</p>
-          </div>
+          {stats.map((stat) => (
+            <div key={stat.title}>
+              <span className="font-display text-6xl font-black leading-none block mb-4 text-primary-container">{stat.value}</span>
+              <h3 className="font-display text-xl font-bold mb-2 text-foreground">{stat.title}</h3>
+              <p className="text-on-surface-variant text-base">{stat.description}</p>
+            </div>
+          ))}
         </div>
 
         <span className="text-primary-container uppercase tracking-widest text-xs font-semibold mb-12 block">
