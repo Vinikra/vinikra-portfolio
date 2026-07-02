@@ -36,7 +36,7 @@ export default function Work() {
               rel="noopener noreferrer"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: true, margin: "-50px" }}
               transition={{ delay: i * 0.1, type: "spring", stiffness: 100, damping: 20 }}
               className="group block relative"
             >
@@ -55,7 +55,7 @@ export default function Work() {
                 <div className="absolute bottom-0 inset-x-0 p-8 sm:p-12 bg-gradient-to-t from-ink via-ink/80 to-transparent">
                   <h3 className="text-3xl sm:text-4xl font-serif mb-4">{project.name}</h3>
                   <div className="flex flex-col sm:flex-row gap-4 sm:items-end justify-between">
-                    <p className="text-slate max-w-xl text-lg">
+                    <p className="text-slate max-w-xl text-base sm:text-lg">
                       {project.description}
                     </p>
                     <span className="text-xs uppercase tracking-widest text-accent/60 font-semibold border border-white/10 rounded-full px-4 py-2 shrink-0">
