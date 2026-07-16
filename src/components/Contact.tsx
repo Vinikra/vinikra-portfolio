@@ -19,6 +19,7 @@ export default function Contact() {
       name: formData.get("name"),
       email: formData.get("email"),
       phone: formData.get("phone"),
+      budget: formData.get("budget"),
       message: formData.get("message"),
     };
 
@@ -103,6 +104,22 @@ export default function Contact() {
                   className={fieldClass}
                   placeholder="(66) 99999-9999"
                 />
+              </div>
+
+              <div className="flex flex-col gap-2">
+                <label htmlFor="budget" className={labelClass}>Faixa de Orçamento</label>
+                <select
+                  id="budget"
+                  name="budget"
+                  required
+                  className={`${fieldClass} appearance-none cursor-pointer bg-surface`}
+                >
+                  <option value="" disabled selected>Selecione uma opção</option>
+                  <option value="<3k">Ainda estou pesquisando (Abaixo de R$ 3.000)</option>
+                  <option value="3k-6k">R$ 3.000 a R$ 6.000</option>
+                  <option value="6k-10k">R$ 6.000 a R$ 10.000</option>
+                  <option value=">10k">Acima de R$ 10.000</option>
+                </select>
               </div>
 
               <div className="flex flex-col gap-2">

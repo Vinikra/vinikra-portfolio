@@ -11,6 +11,7 @@ export type Project = {
   description: string;
   link: string;
   color: string;
+  metrics?: { label: string; value: string }[];
 };
 
 export const projects: Project[] = [
@@ -20,6 +21,10 @@ export const projects: Project[] = [
     description: "Landing page de altíssima performance focada em captação de leads. Combina design premium com técnicas pesadas de conversão local.",
     link: "https://alianca-inglesa.vercel.app",
     color: "#c3f400", // neon green
+    metrics: [
+      { label: "Usuários Ativos (7d)", value: "+1.089%" },
+      { label: "Eventos Gerados", value: "2.6k" },
+    ],
   },
   {
     name: "Olhar Estoico",

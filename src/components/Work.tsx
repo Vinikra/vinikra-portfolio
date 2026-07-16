@@ -89,11 +89,25 @@ export default function Work() {
 
                 <div className="absolute bottom-0 inset-x-0 p-8 sm:p-12 bg-gradient-to-t from-background via-background/90 to-transparent">
                   <h3 className="text-3xl sm:text-4xl font-display font-bold mb-4 text-foreground">{project.name}</h3>
-                  <div className="flex flex-col sm:flex-row gap-4 sm:items-end justify-between">
-                    <p className="text-on-surface-variant max-w-xl text-base sm:text-lg">
-                      {project.description}
-                    </p>
-                    <span className="text-xs uppercase tracking-widest text-primary-container font-semibold border border-primary-container/20 rounded-full px-4 py-2 shrink-0">
+                  <div className="flex flex-col sm:flex-row gap-6 sm:items-end justify-between">
+                    <div className="max-w-xl">
+                      <p className="text-on-surface-variant text-base sm:text-lg mb-6">
+                        {project.description}
+                      </p>
+                      
+                      {project.metrics && (
+                        <div className="flex flex-wrap gap-4">
+                          {project.metrics.map((m) => (
+                            <div key={m.label} className="bg-primary-container/10 border border-primary-container/20 rounded-lg px-4 py-3 min-w-[140px]">
+                              <span className="block text-primary-container font-display font-black text-2xl sm:text-3xl leading-none mb-1">{m.value}</span>
+                              <span className="block text-on-surface-variant text-[10px] uppercase tracking-widest font-semibold">{m.label}</span>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                    
+                    <span className="text-xs uppercase tracking-widest text-primary-container font-semibold border border-primary-container/20 rounded-full px-4 py-2 shrink-0 self-start sm:self-end">
                       {project.role}
                     </span>
                   </div>
