@@ -114,11 +114,11 @@ export default function Contact() {
                   required
                   className={`${fieldClass} appearance-none cursor-pointer bg-surface`}
                 >
-                  <option value="" disabled selected>Selecione uma opção</option>
-                  <option value="<3k">Ainda estou pesquisando (Abaixo de R$ 3.000)</option>
-                  <option value="3k-6k">R$ 3.000 a R$ 6.000</option>
-                  <option value="6k-10k">R$ 6.000 a R$ 10.000</option>
-                  <option value=">10k">Acima de R$ 10.000</option>
+                  <option value="" disabled selected className="bg-surface text-foreground">Selecione uma opção</option>
+                  <option value="<3k" className="bg-surface text-foreground">Ainda estou pesquisando (Abaixo de R$ 3.000)</option>
+                  <option value="3k-6k" className="bg-surface text-foreground">R$ 3.000 a R$ 6.000</option>
+                  <option value="6k-10k" className="bg-surface text-foreground">R$ 6.000 a R$ 10.000</option>
+                  <option value=">10k" className="bg-surface text-foreground">Acima de R$ 10.000</option>
                 </select>
               </div>
 
